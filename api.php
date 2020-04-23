@@ -15,7 +15,7 @@ class api extends restful_api {
         }
     }
 
-    function checkptbac2()
+    function checktamgiac()
     {
         if($this->method == 'GET')
         {
@@ -23,7 +23,7 @@ class api extends restful_api {
         }
     }
 
-    function getptbac2($params)
+    function gettamgiac($params)
     {
         if(empty($params[0])||empty($params[1])||empty($params[2])||!empty($params[3]))
         {
@@ -33,31 +33,15 @@ class api extends restful_api {
             $a=(double)$params[0];
             $b=(double)$params[1];
             $c=(double)$params[2];
-            $denta = $b*$b - 4*$a*$c;
-            if($a==0)
+            if(($a + $b) > $c && ($b + $c) > $a && ($c + $a) > $b)
             {
+                $data="Day la tam giac thuong";
                 return array("status" => false, "data" => array());
             }
-            elseif($denta<0)
+            elseif($a == $b && $b == $c)
             {
-                $x1 = null;
-                $x2 = null;
-                $data = "Phuong trinh vo nghiem";
-                return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
-            }
-            elseif($denta==0)
-            {
-                $x1 = (double) round(-$b/(2*$a),2);
-                $x2 = (double) round(-$b/(2*$a),2);
-                $data = "Phuong trinh co nghiem kep";
-                return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
-            }
-            elseif ($denta>0)
-            {
-                $x1 = (double) round((-$b-sqrt($denta))/(2*$a),2);
-                $x2 = (double) round((-$b+sqrt($denta))/(2*$a),2);
-                $data = "Phuong trinh vo nghiem";
-                return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
+                $data = "Day la tam giac deu";
+                return array("status" => true, "data" => array());
             }
         }
     }
