@@ -9,12 +9,6 @@ class api extends restful_api {
         parent::__construct();
     }
 
-    function checkyear(){
-        if ($this->method == 'GET'){
-            $this->response(200, $this->getyear($this->params));
-        }
-    }
-
     function checktamgiac()
     {
         if($this->method == 'GET')
