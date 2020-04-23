@@ -26,13 +26,13 @@ class api extends restful_api
             return array("status" => false, "data" => array());
         }
         else{
-            $a = isset($_GET['a']) ? $_GET['a'] : '';
-            $b = isset($_GET['b']) ? $_GET['b'] : '';
-            $c = isset($_GET['c']) ? $_GET['c'] : '';
+            $a=(double)$params[0];
+            $b=(double)$params[1];
+            $c=(double)$params[2];
 			
-            if(($a + $b) <= $c || ($b + $c) <= $a || ($c + $a) <= $b)
+            if(($a + $b) > $c && ($b + $c) > $a && ($c + $a) > $b)
             {
-               return $data="Day khong phai tam giac";
+               return $data="Day la tam giac thuong";
             }
             elseif($a == $b && $b == $c)
             {
