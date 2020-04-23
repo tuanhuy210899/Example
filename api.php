@@ -56,10 +56,6 @@ class api extends restful_api {
             {
                 return $data = "Day la tam giac vuong";
             }
-            else
-            {
-                return $data = "Day la tam giac thuong";
-            }
         }
     }
 
