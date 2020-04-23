@@ -86,14 +86,14 @@ class api extends restful_api {
                    $ngay = 1;
                    $thang =1;
                    $nam = $y +1;
-                   return array("status" => true,"data" => array("ngay"=>$ngay,"thang"=>$thang,"nam"=>$nam,"result"=>$data));
+                   return data="ngay:".$ngay.",thang: ".$thang.", nam:".$nam."";
                }
                 else 
                 {
                     $ngay = 1;
                     $thang =$m +1;
                     $nam = $y;
-                    return array("status" => true,"data" => array("ngay"=>$ngay,"thang"=>$thang,"nam"=>$nam,"result"=>$data));
+                    return data="ngay:".$ngay.",thang: ".$thang.", nam:".$nam."";
                     
                 }                
             }
@@ -102,7 +102,7 @@ class api extends restful_api {
                     $ngay = $d+1;
                     $thang = $m;
                     $nam = $y;
-                    return array("status" => true,"data" => array("ngay"=>$ngay,"thang"=>$thang,"nam"=>$nam,"result"=>$data));
+                    return data="ngay:".$ngay.",thang: ".$thang.", nam:".$nam."";
             }
         }
     }
