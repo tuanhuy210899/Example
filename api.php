@@ -35,7 +35,7 @@ class api extends restful_api {
             $c=(double)$params[2];
             if(($a + $b) > $c && ($b + $c) > $a && ($c + $a) > $b)
             {
-                $data="Day la tam giac thuong";
+               return $data="Day la tam giac thuong";
             }
             elseif($a == $b && $b == $c)
             {
