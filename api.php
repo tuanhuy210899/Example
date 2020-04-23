@@ -36,7 +36,6 @@ class api extends restful_api {
             if(($a + $b) > $c && ($b + $c) > $a && ($c + $a) > $b)
             {
                 $data="Day la tam giac thuong";
-                return array("status" => false, "data" => array());
             }
             elseif($a == $b && $b == $c)
             {
