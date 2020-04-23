@@ -11,7 +11,7 @@
         a = document.getElementById("inputday").value;
         b = document.getElementById("inputmonth").value;
         c = document.getElementById("inputyear").value;
-        window.open("api.php/checkyear/"+a+"/"+b+"/"+c);
+        window.open("api-ngayketiep.php/checkngayketiep/"+a+"/"+b+"/"+c);
     }
 </script>
 
