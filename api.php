@@ -45,20 +45,20 @@ class api extends restful_api {
             {
                 if($a * $a == $b * $b + $c * $c || $b * $b == $a * $a + $c * $c || $c * $c == $a * $a + $b *$b)
                 {
-                    return $data = "Day la tam giac vuong can"
+                    return $data = "Day la tam giac vuong can";
                 }
                 else
                 {
-                    return $data = "Day la tam giac can"
+                    return $data = "Day la tam giac can";
                 }
             }
             elseif($a2==$b2+$c2 || $b2==$a2+$c2 || $c2==$a2+$b2)
             {
-                return $data = "Day la tam giac vuong"
+                return $data = "Day la tam giac vuong";
             }
             else
             {
-                return $data = "Day la tam giac thuong"
+                return $data = "Day la tam giac thuong";
             }
         }
     }
