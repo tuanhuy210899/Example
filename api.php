@@ -35,12 +35,30 @@ class api extends restful_api {
             $c=(double)$params[2];
             if(($a + $b) > $c && ($b + $c) > $a && ($c + $a) > $b)
             {
-               return $data=Day la tam giac thuong;
+               return $data="Day la tam giac thuong";
             }
             elseif($a == $b && $b == $c)
             {
-                $data = "Day la tam giac deu";
-                return array("status" => true, "data" => array());
+                return $data = "Day la tam giac deu";
+            }
+            elseif($a == $b || $a == $c || $c == $b)
+            {
+                if($a * $a == $b * $b + $c * $c || $b * $b == $a * $a + $c * $c || $c * $c == $a * $a + $b *$b)
+                {
+                    return $data = "Day la tam giac vuong can"
+                }
+                else
+                {
+                    return $data = "Day la tam giac can"
+                }
+            }
+            elseif($a2==$b2+$c2 || $b2==$a2+$c2 || $c2==$a2+$b2)
+            {
+                return $data = "Day la tam giac vuong"
+            }
+            else
+            {
+                return $data = "Day la tam giac thuong"
             }
         }
     }
