@@ -32,7 +32,7 @@
     <input type="number" id="inputc" name="lname"><br>
     <input type ="button" name="OKE" value="Submit" onclick="getLinkJSONtamgiac()">
 </form>
-<h1>Kiểm tra năm nhuần</h1>
+<h1>Nhập ngày tháng năm</h1>
 <form>
     <label for="lname">Nhập năm</label><br>
     <input type="number" id="inputyear" name="lname"><br>
