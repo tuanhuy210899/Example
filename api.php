@@ -72,13 +72,13 @@ class api extends restful_api {
             $y=(double)$params[2];
             if ($d > 31 || $m >12) 
             {
-                return $data="Nhap ngay/thang khong dung"
+                return $data="Nhap ngay/thang khong dung";
 
             } 
             elseif (($d == 31 && $m == 2)||($d == 30 && $m == 2)||($d == 31 && $m == 4)||($d == 31 && $m == 6)||($d == 31 && $m == 9)||($d == 31 && $m == 11)) 
             {
-                return $data="Nhap ngay khong dung vơi thang"
-            }            }
+                return $data="Nhap ngay khong dung vơi thang";
+            }            
             elseif (($d == 31 && $m == 1)||($d == 31 && $m == 3)||($d == 31 && $m == 5)||($d == 31 && $m == 7)|| ($d == 31 && $m == 8)||($d == 31 && $m == 10)||($d == 31 && $m == 12)||($d == 28 && $m == 2)||($d == 30 && $m == 4)||($d == 30 && $m == 6)||($d == 30 && $m == 9)||($d == 30 && $m == 11)) 
             {
                if($m ==12)
